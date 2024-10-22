@@ -1,0 +1,27 @@
+
+class Car {
+
+    String model, color;
+    int year;
+
+
+    public Car(String model, String color, int year) {
+        this.model = model;
+        this.color = color;
+        this.year = year;
+    }
+
+
+    public void showDetailsAndStart() {
+        System.out.println("Model: " + model + ", Color: " + color + ", Year: " + year);
+        System.out.println(model + " is starting...");
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        new Car("Tesla Model S", "Red", 2022).showDetailsAndStart();
+        new Car("Ford Mustang", "Blue", 2021).showDetailsAndStart();
+    }
+}
