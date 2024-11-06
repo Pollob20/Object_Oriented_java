@@ -1,0 +1,25 @@
+class Tricky {
+    public static void main(String[] args) {
+        Tricky obj1 = new Tricky();
+        Tricky obj2 = new Tricky();
+        
+        System.out.println(obj1 == obj2);  
+        System.out.println(obj1.equals(obj2));  
+
+        obj2 = obj1;
+        
+        System.out.println(obj1 == obj2);  
+        System.out.println(obj1.equals(obj2));
+    }
+    
+    
+    public boolean equals(Tricky obj) {
+        return true;
+    }
+    
+    
+    @Override
+    public boolean equals(Object obj) {
+        return false;
+    }
+}
