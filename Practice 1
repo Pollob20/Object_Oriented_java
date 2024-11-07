@@ -1,0 +1,40 @@
+class Stack {
+    private int[] stack;
+    private int top = -1;
+    private static final int MAX = 5;
+
+    public Stack() {
+        stack = new int[MAX];
+    }
+
+    public void push(int v) {
+        if (top < MAX - 1) {
+            stack[++top] = v;
+            System.out.println(v + " pushed");
+        } else {
+            System.out.println("Overflow");
+        }
+    }
+
+    public void pop() {
+        if (top >= 0) {
+            System.out.println(stack[top--] + " popped");
+        } else {
+            System.out.println("Underflow");
+        }
+    }
+
+    public void display() {
+        if (top == -1) {
+            System.out.println("Stack is empty");
+        } else {
+            for (int i = 0; i <= top; i++) {
+                System.out.print(stack[i] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        Stack stack = new Stack();
+        stack.push(10
